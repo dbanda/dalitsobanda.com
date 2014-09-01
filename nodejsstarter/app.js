@@ -43,6 +43,9 @@ var passportConf = require('./config/passport');
 
 var app = express();
 
+// enable proxy
+app.enable('trust proxy');
+
 /**
  * Connect to MongoDB.
  */
@@ -112,6 +115,7 @@ app.use(function(req, res, next) {
   next();
 });
 app.use(express.static(path.join(__dirname, 'public'), { maxAge: week }));
+
 
 /**
  * Main routes.
