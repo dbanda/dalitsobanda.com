@@ -68,7 +68,7 @@ var csrfExclude = ['/url1', '/url2'];
 /**
  * Express configuration.
  */
-
+__dirname = __dirname + "/node/";
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -114,7 +114,7 @@ app.use(function(req, res, next) {
   req.session.returnTo = req.path;
   next();
 });
-app.use(express.static(path.join(__dirname + "/node/", 'public'), { maxAge: week }));
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: week }));
 
  
 /**
