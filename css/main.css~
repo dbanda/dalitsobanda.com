@@ -137,7 +137,9 @@ body {
 }
 
 #social div {
+	display:  inline-block;
 	text-align: left;
+	width: 700px;
 }
 li{
 	list-style: none;
