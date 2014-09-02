@@ -1,0 +1,3 @@
+[submodule "votesms"]
+	path = votesms
+	url = https://github.com/dbanda/votesms.git
