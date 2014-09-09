@@ -19,13 +19,32 @@
     font-weight: normal;
     font-style: normal;
     
+    
 
 }
 
 body { 
-    font-family: 'dbscriptmedium'; 
+    font-family: 'dbscriptmedium';
+    font-variant: small-caps; 
+    background-image: url('../img/backg.jpg');
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: cover;
 }
 
+body a {
+	text-decoration: none;
+	color: black;
+	
+	font-variant: small-caps;
+}
+
+body a:hover{
+	color: red;
+	font-size: 110%;
+	font-weight: bold;
+	font-variant: small-caps;
+}
 html,
 button,
 input,
@@ -36,9 +55,12 @@ textarea {
 
 html {
     line-height: 1.4;
+  
     
 }
-
+h1 {
+	font-variant: small-caps;
+}
 /*
  * Remove text-shadow in selection highlight: h5bp.com/i
  * These selection rule sets have to be separate.
@@ -119,11 +141,11 @@ textarea {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-	font-size: 36pt;
+	font-size: 16pt;
 }
 
 #wrapper h1 {
-	font-size: 68pt;
+	font-size: 40pt;
 }
 body {
 	text-align: center;
@@ -137,9 +159,7 @@ body {
 }
 
 #social div {
-	display:  inline-block;
 	text-align: left;
-	width: 700px;
 }
 li{
 	list-style: none;

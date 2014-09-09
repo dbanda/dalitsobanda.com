@@ -24,7 +24,7 @@
     <body>
 		  <div id="wrapper">
         <!-- Add your site or application content here -->
-        		<h1>STUFF</h1>
+        		<h1>Stuff</h1>
         		<br>
         		<ul>
 					<li><a href="./votesms/vote.html">Votesms</a></li>  
