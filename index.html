@@ -39,6 +39,7 @@
                     <li class="layer" data-depth="0.60"><a href="http://gsl.mit.edu">MIT Global Startup Labs</a></li>  
 					<li class="layer" data-depth="-0.80"><a href="http://africans.mit.edu">MIT africans</a></li>   
                     <li class="layer" data-depth="-1.80"><a href="http://dalitsobanda.com/blog">Blog</a></li> 
+                    <li class="layer" data-depth="0.2"><a href="http://github.com/blog">My Github</a></li>  
         		</ul>
         		<br><br>
         		<p>More Coming Soon!</p>
@@ -104,7 +105,9 @@
         var parallax = new Parallax(scene);
         var litems = document.getElementsByTagName('li');
         for (var i = litems.length - 1; i >= 0; i--) {
+            litems[i].style.lineHeight = "40px";
             litems[i].style.position = "relative";
+
         };
         </script>
     </body>

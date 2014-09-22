@@ -9,10 +9,11 @@ body {
 .social-icons li {
   float: left;
   position: relative;
-  width: 9%;
-  height: 0;
+  width: 4%;
+  height: 4%;
   margin: 1% 0.5%;
   padding-bottom: 9%;
+  overflow: hidden;
 }
 .social-icons:last-of-type {
   margin-right: 0;
@@ -25,7 +26,7 @@ body {
   min-height: 10px;
   min-width: 10px;
   width: 100%;
-  height: 100%;
+  height: 50%;
   border: 0;
   background-color: #fff;
   background-size: 100%;
@@ -107,28 +108,28 @@ body {
 }
 
 .layer:nth-child(1) {
-  opacity: 0.45;
+  opacity: 0.85;
 }
 .layer:nth-child(1) button {
   -webkit-transform: rotate(150deg);
 }
 
 .layer:nth-child(2) {
-  opacity: 0.30;
+  opacity: 0.70;
 }
 .layer:nth-child(2) button {
   -webkit-transform: rotate(120deg);
 }
 
 .layer:nth-child(3) {
-  opacity: 0.45;
+  opacity: 0.65;
 }
 .layer:nth-child(3) button {
   -webkit-transform: rotate(90deg);
 }
 
 .layer:nth-child(4) {
-  opacity: 0.60;
+  opacity: 0.63;
 }
 .layer:nth-child(4) button {
   -webkit-transform: rotate(60deg);
@@ -149,4 +150,8 @@ body {
 
 li{
   position: relative;
+}
+
+#menu{
+  overflow: hidden;
 }
