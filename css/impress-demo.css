@@ -83,15 +83,15 @@ table {
 */
 body {
     font-family: 'PT Sans', sans-serif;
-    min-height: 740px;
+    min-height: 740px;*/
 
-    background: rgb(215, 215, 215);
+    /*background: rgb(215, 215, 215);
     background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
     background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
     background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
     background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
     background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));*/
 }
 
 /*
@@ -167,7 +167,7 @@ a:focus {
     position: relative;
     width: 900px;
     padding: 40px;
-    margin: 20px auto;
+    /*padding-top: 300px;*/
 
     -webkit-box-sizing: border-box;
     -moz-box-sizing:    border-box;
@@ -185,8 +185,9 @@ a:focus {
 
     Basically we remove the margin and make inactive steps a little bit transparent.
 */
-.impress-enabled .step {
-    margin: 0;
+.impress-enabled .step {*/
+    /*margin: 0;*/
+    /*margin-top: 40px;*/
     opacity: 0.3;
 
     -webkit-transition: opacity 1s;
@@ -209,6 +210,7 @@ a:focus {
 .slide {
     display: block;
 
+    margin-top: 300px;
     width: 900px;
     height: 700px;
     padding: 40px 60px;
@@ -515,7 +517,7 @@ a:focus {
     There is no content in it, so we make sure it's not visible because we want
     to be able to click on other steps.
 
-*/
+*/#/bored
 #overview { display: none }
 
 /*
