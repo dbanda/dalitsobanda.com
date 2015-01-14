@@ -1,0 +1,794 @@
+
+				html {
+					height: 100%;
+					overflow: auto;
+				}
+
+				body {
+					background: white;
+					margin: 0 auto;
+					padding: 0;
+					overflow: auto;
+					position: relative;
+				}
+
+				.bold {font-weight: bold;}
+
+				div#container {
+					margin-left: 14.0%;
+					margin-right: 14.0%;
+					padding: 2.5%;
+					color: #202020;
+					overflow: auto;
+					font-family: 'Lora', serif;
+					padding-bottom: 3em;
+					margin-top: 1%;
+					overflow-x: hidden;
+				}
+
+
+				div#content {
+
+					background-color: white;
+					font-size: 1.55em;
+					line-height: 1.7m;
+					float: left;
+					z-index: 2;
+					padding-top: 0;
+					margin-top: 0;
+					padding-right: 5%;
+					width: 100%;
+					-webkit-font-smoothing: antialiased;
+
+				}
+
+				div#annotation {
+					float: right;
+					width: 30%;
+					background-color: white;
+					z-index: -1;
+					font-family: 'Lato', sans-serif;
+					font-size: 1.2em;
+					line-height: 1.3em;
+					height: 0;
+				}
+
+				#pointer {
+					position: fixed;
+					top: 75%;
+					margin-left: 12%;
+					z-index: 0;
+					opacity:0.4;
+					max-height: 1.6em;
+					width: .5em;
+					border: 2px solid black;
+				}
+
+				#home {
+					position: fixed;
+					top: 2%;
+					left: 2%;
+					opacity: .90;
+					z-index: 3;
+					max-width: 2.5%;
+					height: auto;
+				}
+
+				#home:hover {
+					opacity: 1.0;
+				}
+				#search:hover {
+					opacity: 1.0;
+				}
+
+				#search {
+					position: fixed;
+					top: 2%;
+					right: 2%;
+					opacity: .90;
+					max-width: 2.5%;
+					height: auto;
+					z-index: 3;
+				}
+
+				#searchBar {
+					position: fixed;
+					top: 10%;
+					left: 78.2%;
+					width: 20%;
+					z-index: 100;
+					display: none;
+					border: 2px solid black;
+				}
+
+				div#alternateContent{
+					background-color: white;
+					font-size: 1.4em;
+					line-height: 1.2em;
+					float: left;
+					z-index: 0;
+					padding-top: 0;
+					margin-top: 0;
+					padding-right: 5%;
+					width: 100%;
+					display:none;
+				}
+
+				.clearfix:before, .clearfix:after {
+					content: "";
+					display: table;
+				}
+				.clearfix:after {
+					clear:both;
+				}
+				.center {
+					text-align: center;
+				}
+
+
+				p.first:first-line{ line-height: 1em;}
+				p.first:first-letter{ font-size: 3em;}
+				p.first {padding-top: 1em;}
+
+
+				span.annotation{
+					border-top: 1px solid #AAAAAA;
+					border-bottom: 1px solid #AAAAAA;
+					padding-top: 2.2%;
+					padding-bottom: 2.5%;
+					display: block;
+
+				}
+				.note {
+					color: #7a2801;
+				}
+
+				span.annotation i {
+					color: #7a2801;
+				}
+
+					a.annotBtn {
+					color: #7a2801;
+				}
+
+				.titlepage    {
+					float: left;
+					padding-right: 10%;
+				}
+
+				.paddingBottom { padding-bottom: 10%;}
+				.paddingRight { padding-right: 10%; }
+				.paddingLeft { padding-left: 10%;}
+
+				.visibleAnnotation {
+					font-size: .85em;
+				}
+
+
+				/* BEGIN SIDEBAR CSS ------------------------------------ */
+
+				#sidebar {
+					font-size: 1.0em;
+					position: absolute;
+					left: 0%;
+					color: #303030;
+					width: 9%;
+					z-index: 1;
+					padding-top: 5%;
+					padding-left: 2%;
+					padding-right: 1%;
+					padding-bottom: 2%;
+				}
+				#sidebarNav {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+				}
+
+				#sidebarNav  a{
+					text-decoration: none;
+					color: black;
+					font-size: 0.9em;
+					font-family: 'Lato', sans-serif;
+
+				}
+				#sidebarNav  a:hover{
+					color: #7a2801;
+				}
+
+				.chapter{
+					border-bottom: 1px solid grey;
+					padding-bottom: 3.5%;
+					margin-bottom: 3.5%;
+				}
+
+				.navHeader{
+					border-bottom: 1px solid grey;
+					padding-bottom: 2%;
+					margin-bottom: 2%;
+					font-size: 1.0em;
+					color: #7a2801;
+					font-weight: bold;
+					margin-left: -8%;
+				}
+
+				/* END SIDEBAR CSS ------------------------------------------- */
+
+				/* BEGIN FOOTER CSS ------------------------------------------ */
+
+				#copyrightFooter {
+					z-index: 3;
+					text-align: center;
+					color: #DDDDDD;
+					background-color: #333333;
+					padding-left: 8%;
+					padding-right: 8%;
+					padding-bottom: 2%;
+					padding-top: 2%;
+					position: relative;
+					font-size: 1.0em;
+
+				}
+				#copyrightFooter a {
+					color: #DDDDDD;
+					text-decoration: none;
+				}
+				#copyrightFooter a.text:hover {
+					color: white;
+				}
+
+				.cf:before,
+				.cf:after {
+					content: " "; /* 1 */
+					display: table; /* 2 */
+				}
+
+				.cf:after {
+					clear: both;
+				}
+
+				#footerLeft {
+					float: left;
+					width: 75%;
+					border-right: 1px solid #DDDDDD;
+					font-family: 'Lato', sans-serif;
+
+					text-align: left;
+				}
+
+				#footerRight {
+					padding-top: 1%;
+					float: right;
+					font-family: 'Lato', sans-serif;
+					font-size: 1.1em;
+					width: 20%;
+					text-align: center;
+				}
+
+				.dali {
+					max-width: 100%;
+					max-height: 100%;
+
+				}
+
+				.legal {
+					text-align: center;
+					font-size: .8em;
+				}
+
+				tr.headers {
+					font-size: 1.45em;
+					line-height: 2.0em;
+					color: white;
+				}
+
+				.limitHeight {
+					height: 1.2em;
+					width: auto;
+					opacity: .9;
+				}
+				.dartmouth {
+					font-family: 'Oranienbaum', serif;
+					font-size: 1.2em;
+				}
+
+				img.limitHeight:hover {
+					opacity: 1.0;
+				}
+
+				#miscLinksTable {
+					width: 100%;
+					font-size: 0.95em;
+					padding-bottom: 1%;
+					text-decoration: none;
+				}
+				#miscLinksTable td{
+					padding-left: .5%;
+					padding-right: .5%;
+					padding-top: .3%;
+					padding-bottom: .3%;
+				}
+
+				/* END FOOTER CSS ------------------------------------------- */
+
+				/* BEGIN HEADER CSS-----------------------------------------------*/
+
+				div#header {
+					font-size: 1.0em;
+					text-align: center;
+					color: white;
+					height: 40%;
+					font-family: 'Lora', sans-serif;
+
+					padding-top: 4.5%;
+					opacity: 1.0;
+					background-image: url('images/banner.jpg');
+					background-repeat: no-repeat;
+					background-size: cover;
+					background-position: center;
+					background-attachment: fixed;
+					z-index: 2;
+					background-color: black;
+				}
+				div#headerPL {
+					font-size: 1.0em;
+					text-align: center;
+					color: white;
+					height: 40%;
+					font-family: 'Lora', sans-serif;
+
+					padding-top: 4.5%;
+					opacity: 1.0;
+					background-image: url('images/paradiseLostBanner.jpg');
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+					background-position: center;
+					background-attachment: fixed;
+					z-index: 2;
+					background-color: black;
+				}
+				div#headerPR {
+					font-size: 1.0em;
+					text-align: center;
+					color: white;
+					height: 40%;
+					font-family: 'Lora', sans-serif;
+
+					padding-top: 4.5%;
+					opacity: 1.0;
+					background-image: url('images/prBanner.jpg');
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+					background-position: center;
+					background-attachment: fixed;
+					z-index: 2;
+					background-color: black;
+				}
+				div#headerCommon {
+					font-size: 1.0em;
+					text-align: center;
+					color: white;
+					height: 40%;
+					font-family: 'Lora', sans-serif;
+
+					padding-top: 4.5%;
+					opacity: 1.0;
+					background-image: url('images/commonplaceBanner.jpg');
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+					background-position: center;
+					background-attachment: fixed;
+					z-index: 2;
+					background-color: black;
+				}
+				div#headerSamson {
+					font-size: 1.0em;
+					text-align: center;
+					color: white;
+					height: 40%;
+					font-family: 'Lora', sans-serif;
+
+					padding-top: 4.5%;
+					opacity: 1.0;
+					background-image: url('images/samsonBanner.jpg');
+					background-repeat: no-repeat;
+					background-size: 100% 100%;
+					background-position: center;
+					background-attachment: fixed;
+					z-index: 2;
+					background-color: black;
+				}
+
+
+				.topNavBar {
+					position: relative;
+
+				}
+
+
+				.navContents {
+					position: relative;
+					left:0;
+					right:0;
+					top: 0;
+					bottom:: 0;
+					margin:auto;
+					white-space: nowrap;
+					height: 100%;
+				}
+				.navContents td {
+
+					width: .5%;
+				}
+
+
+				.navContents a{
+					text-decoration: none;
+					color: white;
+				}
+				.navContentsWrapper {
+					font-size: 1.2em;
+					font-family: 'Lato', sans-serif;
+					position: absolute;
+					text-align: center;
+					width: 90%;
+					left: 5%;
+					margin: auto;
+					top: 0;
+					bottom: 0;
+					height: 100%;
+				}
+
+				.navContents a:hover {
+					color: #DDDDDD;
+				}
+				.inner {
+					width: 100%;
+				}
+
+				.topNavMask {
+					width: 100%;
+					height: 100%;
+					max-height: 55px;
+					display: block;
+				}
+
+				/*#tree {
+					font-size: 1.0em;
+					text-align: left;
+					padding-bottom: .5%;
+					padding-left: 2%;
+				}
+				#tree a {
+					text-decoration: none;
+					color: white;
+				}*/
+
+				/*#tree a:hover {
+					text-decoration: underline;
+
+				}*/
+
+
+				#poemBanner {
+					font-size: .6em;
+					font-family: 'Lato', sans-serif;
+				}
+
+				.align-block{
+					font-size: 3.4em;
+					font-weight: bold;
+					margin-left: 20%;
+					margin-right: 20%;
+					padding-bottom: 3.25%;
+				}
+
+				/* END HEADER CSS---------------------------------------------- */
+
+				/* BEGIN TABLE OF CONTENTS CSS--------------------------- */
+
+				.tocText {
+					margin-left: 5%;
+					margin-right: 5%;
+					text-align: center;
+					padding-bottom: 5%;
+				}
+
+
+				div#containerContents {
+					color: #202020;
+					overflow: auto;
+					font-family: 'Lora', serif;
+					margin-top: 1%;
+					overflow: hidden;
+					margin-bottom: -2px;
+				}
+
+				.baldHeader {
+					padding-top: 2%;
+					padding-bottom: 5.5%;
+				}
+
+				.tocBox {
+					min-height: 300px;
+				}
+
+				.tocBanner {
+					min-height: 325px;
+					background-repeat: no-repeat;
+					background-position: center;
+					background-color: black;
+					background-size: 100% 100%;
+					background-attachment: fixed;
+				}
+				.tocBanner a {
+					text-decoration: none;
+					color: white;
+					font-weight: bold;
+
+				}
+
+				.tocText {
+					overflow: auto;
+					overflow-x: hidden;
+					font-family: 'Lato', sans-serif;
+					padding-top: 3.5%;
+					padding-bottom: 7%;
+				}
+				.tocText a {
+					text-decoration: none;
+					color: #202020;
+					font-weight: bold;
+				}
+				.tocText a:hover {color: #7a2801;}
+				.tocBanner a.text:hover {color: #CCCCCC;}
+
+				.tocAbout {
+					margin-left: 17%;
+					margin-right: 17%;
+					padding-bottom: 5%;
+					padding-top: 3%;
+				}
+
+				.tocBox table.bookNav {
+
+					text-align: left;
+					vertical-align: top;
+					font-size: .95em;
+					width: 100%;
+				}
+				.bookNav td {
+					padding: .5;
+					padding-right: 1em;
+				}
+
+
+				.anchor {
+					display: block;
+					position: relative;
+					top: -100px;
+					visibility: hidden;
+				}
+
+				#wrap{
+					float: left;
+					position: relative;
+					left: 50%;
+				}
+
+				.bookNav {
+					float: left;
+					position: relative;
+					left: -50%;
+					height: 100%;
+				}
+
+
+
+				.leftJustify {
+					text-align: left;
+				}
+
+				.tableHeader {
+					padding-top: 2%;
+					font-weight: bold;
+					font-size: 1.1em;
+					color: #7a2801;
+				}
+				.plBox {
+					background-image: url('images/paradiseLostBanner.jpg');
+
+				}
+				.prBox {
+					background-image: url('images/prBanner.jpg');
+
+				}
+				.samsonBox {
+					background-image: url('images/samsonBanner.jpg');
+
+				}
+				.commonplaceBox {
+					background-image: url('images/commonplaceBanner.jpg');
+					min-height: 350px;
+
+				}
+				.commonplaceBox .boxTitle {
+					padding-top: 25px;
+					line-height: 300px;
+					padding-bottom: 0;
+				}
+
+
+				.downMask {
+					width: 100%;
+					margin-bottom: -5px;
+				}
+				.upMask {
+					width: 100%;
+					text-align: center;
+				}
+
+
+				.boxTitle {
+					font-size: 3.0em;
+					line-height: 350px;
+					height: 100%;
+
+
+					font-family: 'Oxygen', sans-serif;
+				}
+				.reduceSize {
+					font-size: 1.8em;
+				}
+
+				.smallNote {font-size: .8em;}
+
+
+
+				.aboutP {
+					font-size: 1.4em;
+				}
+				.textTitle {
+					font-family: 'Oxygen', sans-serif;
+					font-weight: bold;
+					font-size: 2.2em;
+
+				}
+
+				.floatLeft {float: left;}
+				.floatRight {float: right;}
+				.resizedForToC {
+					max-height: 300px;
+					max-width: auto;
+				}
+
+				p.boxTitle{
+					-webkit-margin-before: 0em;
+					-webkit-margin-after: 0em;
+				}
+
+
+				/* END TABLE OF CONTENTS CSS --------------------------------------- */
+
+				/* Styles retained from previous version of MRR ----------------------------------- */
+				.msummary {
+					font-style: italic;
+				}
+
+				.stanza	{
+					margin-top: 1em;		/*for stanzas separated by a linespace*/
+					margin-bottom:0em;
+					text-indent: 0em;
+				}
+				.margument	{
+				text-indent: 0em;
+				font-style: italic;
+				}	/* milton's Arguments in italic; first line not indented */
+
+				.reversem	{	font-style: normal;}  /* emphases in Milton's italic paragraphs go plain */
+
+				.verse_latin p{
+					margin: 0;
+				}
+
+				.mhead		{ 	font-size: 2.0em;
+				font-weight: bold;
+				line-height: 1.2em;
+				font-family: 'Lato', sans-serif;}	/* milton heading h1 */
+
+				.msubhead  {	font-size: 1.5em;	/* milton subheading h2 */
+								font-weight: bold;
+								text-align: center;
+								font-family: 'Lato', sans-serif;}
+
+				.msubsubhead{ 	font-size: 1.1em;	/* milton subsubheading h3 */
+								font-weight: normal;
+								text-align: center;
+								font-family: 'Lato', sans-serif;}
+
+
+				.title	{ 		text-align: center;
+								text-decoration: none;
+						}	/* centers titles */
+
+				.poemTitle {
+					font-size: 1.2em;
+				}
+
+				.mi		{ 		font-style: italic;}	/* milton's italics */
+
+				.mb		{ 		font-weight: bold;}	/* milton's boldface */
+
+				.author   { font-style: italic;		/* author signature or initials */
+							padding-left: 12em;
+							margin-top: 0em;
+							margin-bottom:0em;
+							text-indent: 0em;	}
+
+				.sd    {	padding-left: 2em;
+							Font-style: italic;
+							text-indent: 0em;	}	/* indents stage directions in italics */
+
+
+				.resume		{	text-indent: 0em;	}		/* resumes para (no indent) after stage direction */
+
+				.song		{		font-style: italic;
+									padding-left: 1.5em;	}    /* for Songs in Comus */
+
+				.songtitle	{	text-indent: 8em;
+								margin-bottom:1em;	}
+
+				.mindent {padding-left: 1.5em;	    /* milton's paragraph and verse paragraph indent */
+							margin-top: 0em;
+							margin-bottom:0em;}
+
+				.m3em	{padding-left: 3em;		/* verse indent larger */
+							margin-top: 0em;
+							margin-bottom:0em;}
+
+				.m6em	{padding-left: 6em;		/* verse indent larger still */
+							margin-top: 0em;
+							margin-bottom:0em;}
+
+				.m9em	{padding-left: 9em;		/* verse indent largest */
+							margin-top: 0em;
+							margin-bottom:0em;	}
+
+				.prefitalic	{ 	font-style: italic;
+								 }						/* prefatory material in italics */
+
+				.prefplain	{ 	font-style: normal;
+									}					/* prefatory material in plain */
+				.dp		{		padding-left: 4em;}	  /* dramatis personae (list of cahracters) */
+
+				.sp     {		font-style: italic; }  /* speech prefix */
+
+
+				.first	{		text-indent: 0em;}	/* formats a paragraph without indenting first line */
+				.firstNoCap { text-indent: 0em;}
+
+				.ahem {		 	display: none;}   /* hides warnings for browsers that don't support css */
+
+				.booktitle 	{ font-style: italic;}  /* Booktitles in italics */
+
+				.lang		{ font-style: italic; }  /* Non-English languages in italics */
+
+
+				.m1em 	{	padding-left: 1em;     /* eliminates skipped line in <p> and indents 1 em */
+							margin-top: 0em;
+							margin-bottom:0em;}
+
+				.mcenter	{text-align: center;}	/* milton's centered text */
+
+				.mstrike 	{text-decoration: line-through;}	/* strike through text */
+
+				.msuper		{vertical-align: super;}		/* superscript */
+
+				.mhalfindent {padding-left: 1em;	/* milton's paragraph and verse paragraph indent */
+					margin-top: 0em;
+					margin-bottom:0em;
+				}
+
+				.indent   {padding-left: 1.5em;	/* editor's paragraph indent */
+							margin-top: 0em;
+							margin-bottom:0em;}
