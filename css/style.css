@@ -390,7 +390,7 @@ body.single .navigation a {
 .site-main,
 #main-container {
   z-index: 1;
-  padding-top: 80px;
+  /*padding-top: 80px;*/
 }
 #blog {
   margin-top: 0;
