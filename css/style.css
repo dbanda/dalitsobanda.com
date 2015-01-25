@@ -581,6 +581,14 @@ body.single .navigation a {
         left: 0
     }
 }
+.menu-switcher:hover, .menu-switcher:after, .menu-switcher:before{
+    background-color: transparent;
+}
+
+.header-container a {
+    background: transparent;
+}
+
 .menu-switcher {
     display: block;
     width: 21px;
@@ -588,7 +596,7 @@ body.single .navigation a {
     position: absolute;
     z-index: 12;
     /*top: 28px;*/
-
+    background: transparent;
     top: 20px;
     left: 25px;
     bottom: 0;
@@ -596,7 +604,6 @@ body.single .navigation a {
     -moz-transition: none;
     -o-transition: none;
     transition: none;
-    background: transparent;
 }
 .menu-switcher i, .menu-switcher i:after, .menu-switcher i:before, .menu-switcher:after, .menu-switcher:before {
     display: block;
@@ -605,6 +612,8 @@ body.single .navigation a {
     height: 100%;
     top: 0;
     left: 0;
+    /*background-color:transparent;*/
+    background: transparent;
 }
 .menu-switcher:before {
     content: "";
@@ -615,8 +624,9 @@ body.single .navigation a {
 }
 .menu-switcher i:after, .menu-switcher i:before, .menu-switcher:after {
     content: "";
-    height: 2px;
-    background: #000;
+    height: 4px;
+    background: white;
+    /*background-color:transparent;*/
     -webkit-transition: .15s;
     -moz-transition: .15s;
     -o-transition: .15s;
@@ -629,7 +639,8 @@ body.single .navigation a {
     top: 14px;
 }
 .menu-switcher.active i:after, .menu-switcher.active i:before, .menu-switcher.active:after, .menu-switcher:hover i:after, .menu-switcher:hover i:before, .menu-switcher:hover:after {
-    background: #ccc;
+    background: white;
+    /*background-color:transparent;*/
 }
 .menu-switcher.active:before {
     /*border-bottom-width: 1px*/
