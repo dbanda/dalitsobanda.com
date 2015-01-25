@@ -596,6 +596,7 @@ body.single .navigation a {
     -moz-transition: none;
     -o-transition: none;
     transition: none;
+    background: transparent;
 }
 .menu-switcher i, .menu-switcher i:after, .menu-switcher i:before, .menu-switcher:after, .menu-switcher:before {
     display: block;
