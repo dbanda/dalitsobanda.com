@@ -43,7 +43,7 @@ section.module.parallax h1 {
   text-transform: uppercase;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-section.module.parallax-1 {
+s/*ection.module.parallax-1 {
   background-image: url("../img/backg.jpg");
 }
 section.module.parallax-2 {
@@ -51,7 +51,7 @@ section.module.parallax-2 {
 }
 section.module.parallax-3 {
   background-image: url("../img/demo/_small/3.jpg");
-}
+}*/
 
 @media all and (min-width: 600px) {
   section.module h2 {
